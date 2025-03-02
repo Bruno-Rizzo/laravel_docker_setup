@@ -11,12 +11,7 @@ git clone https://github.com/Bruno-Rizzo/laravel_docker_setup.git
 ```
 
 Copiar os arquivos docker-compose.yml, Dockerfile, diretório docker/ e .env para o seu projeto
-```sh
-cp -rf setup-docker-laravel/* app-laravel/
-```
-```sh
-cd app-laravel/
-```
+
 
 Subir os containers do projeto
 ```sh
