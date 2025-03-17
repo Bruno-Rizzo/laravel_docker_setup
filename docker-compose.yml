@@ -1,5 +1,3 @@
-version: "3.7"
-
 services:
     # image project
     app:
@@ -40,19 +38,6 @@ services:
             - ./.docker/mysql/dbdata:/var/lib/mysql
         ports:
             - "3306:3306"
-        networks:
-            - laravel
-
-    # PHPMyAdmin
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        restart: unless-stopped
-        ports:
-            - "8080:80"
-        environment:
-            PMA_HOST: db
-            PMA_PORT: 3306
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-userpass}
         networks:
             - laravel
 
